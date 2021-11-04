@@ -1,0 +1,29 @@
+#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#matrix {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    width: 125px;
+}
+
+.matrix-input {
+    width: 35px;
+    height: 35px;
+}
+
+#edited-image-div {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#base-image, .edited-image {
+    width: 350px;
+    border-radius: 5px;
+    border: 2px solid black;
+}

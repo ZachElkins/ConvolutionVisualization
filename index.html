@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <script src="./sketch.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Convolutions</title>
+</head>
+<body>
+    <div id="content">
+        <div id="base-image-div">
+        </div>
+        <div id="controls">
+            <input id="file-input" type="file" onchange="loadImage(event)", accept="image/png, image/jpeg, image/jpg">
+            <div id="matrix">
+                <input type="number" class="matrix-input" id="00" value="-1"\>
+                <input type="number" class="matrix-input" id="01" value="-1"\>
+                <input type="number" class="matrix-input" id="02" value="-1"\>
+                <input type="number" class="matrix-input" id="10" value="-1"\>
+                <input type="number" class="matrix-input" id="11" value="8"\>
+                <input type="number" class="matrix-input" id="12" value="-1"\>
+                <input type="number" class="matrix-input" id="20" value="-1"\>
+                <input type="number" class="matrix-input" id="21" value="-1"\>
+                <input type="number" class="matrix-input" id="22" value="-1"\>
+            </div>
+            <input type="checkbox" id="toggle-normalize" onClick="toggleNormalize(event)">
+            <label for="toggle-normalize">Normalize</label>
+            <br>
+            <button id="convolve" onClick="loadAndConvolve()">Convolve</button>
+        </div>
+        <div id="edited-image-div">
+        </div>
+        <canvas id="canvas" width="700" height="700" hidden></canvas>
+    </div>
+</body>
+</html>
